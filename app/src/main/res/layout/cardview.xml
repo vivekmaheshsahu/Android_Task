@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:layout_constraintHorizontal_bias="1.0"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="1.0"
+        android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageview_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                tools:src="@drawable/image"
+                card_view:riv_mutate_background="true"
+                card_view:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageview_photo"
+                tools:ignore="MissingConstraints"
+                android:textColor="#4F7C22"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                    android:id="@+id/textview_details"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/textview_name"
+                    tools:text="Dob : 30/05/1994 Age : 30 "
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textview_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/textview_details"
+                    tools:text="phone : 01539426337 cell : 0799-240-154"
+                    android:textSize="18dp"
+                    />
+
+            <TextView
+                android:id="@+id/textview_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textview_contact"
+                android:textAlignment="center"
+                tools:text="York State, United Kingdom email : edwin.welch@example.com "
+                android:textSize="14dp"
+                />
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_below="@id/textview_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="90dp">
+        <ImageView
+            android:id="@+id/accept_button"
+            android:layout_width="match_parent"
+            android:src="@drawable/accept"
+            android:layout_height="60dp"/>
+            <ImageView
+                android:id="@+id/accept_button_clicked"
+                android:layout_width="match_parent"
+                android:src="@drawable/accept_onclick"
+                android:layout_height="60dp"/>
+            <TextView
+                android:id="@+id/textview_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_alignParentBottom="true"
+                android:text="Accept"
+                android:textSize="20dp"
+                />
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="90dp">
+        <ImageView
+            android:id="@+id/decline_button"
+            android:layout_width="match_parent"
+            android:src="@drawable/decline"
+            android:layout_height="60dp"/>
+                <ImageView
+                    android:id="@+id/decline_button_onclick"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/decline_onclick"
+                    android:layout_height="60dp"/>
+
+                <TextView
+                    android:id="@+id/textview_decline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:text="Decline"
+                    android:textSize="20dp"
+                    />
+            </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
